@@ -11,7 +11,7 @@
          	"navbar main";
          }
          @media (min-width: 300px){
-         html {
+         body {
          	grid-template-columns: auto 1fr;
          	grid-template-areas:
          	"navbar"
@@ -57,7 +57,7 @@
          	font-size: 22px;
          }
          ol {
-            padding-inline-start: 0px;
+          padding-inline-start: 0px;
          }
          #navbar {
          	position: fixed;
@@ -68,6 +68,7 @@
          	height: 100%;
          	border-right: solid;
          	border-color: rgba(0, 22, 22, 0.4);
+          grid-area: navbar;
          }
          #navbar ul {
          	height: 88%;
@@ -94,6 +95,7 @@
          	margin-left: 310px;
          	padding: 20px;
          	margin-bottom: 110px;
+          grid-area: main;
          }
          #main-doc header {
          	text-align: left;
