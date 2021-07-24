@@ -6,13 +6,15 @@
          	min-width: 290px;
         	display: grid;
          	grid-template-columns: 300px 1fr;
+          grid-template-rows: 1fr;
          	grid-gap: 10px;
          	grid-template-areas:
          	"navbar main";
          }
          @media (min-width: 300px){
          body {
-         	grid-template-columns: auto 1fr;
+         	grid-template-columns: 1fr;
+          grid-template-rows: auto 1fr;
          	grid-template-areas:
          	"navbar"
          	"main";
