@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         body {
+         	min-width: 290px;
+        	display: grid;
+         	grid-template-columns: 300px 1fr;
+         	grid-gap: 10px;
+         	grid-template-areas:
+         	"navbar main";
+         }
+         @media (min-width: 300px){
+         html {
+         	grid-template-columns: auto 1fr;
+         	grid-template-areas:
+         	"navbar"
+         	"main";
+         }
+         }
+         header {
+         	color: black;
+         	margin: 10px;
+         	text-align: center;
+         	font-size: 1.8em;
+         }
+         section article {
+         	color: #4d4e53;
+         	margin: 15px;
+         	font-size: 0.96em;
+         }
+         section li {
+         	margin: 15px 0px 0px 20px;
+         }
+         code {
+         	display: block;
+         	text-align: left;
+         	white-space: pre-line;
+         	position: relative;
+         	word-break: normal;
+         	word-wrap: normal;
+         	line-height: 2;
+         	background-color: #f7f7f7;
+         	padding: 15px;
+         	margin: 10px;
+         	border-radius: 5px;
+         }
+         img {
+         	width: 800px;
+         	max-width: 100%;
+         	height: auto;
+         }
+         h2 {
+         	font-weight: 600;
+         	margin: 1em 0 1em;
+         	line-height: 1.25em;
+         	font-size: 22px;
+         }
+         #navbar {
+         	position: fixed;
+         	min-width: 290px;
+         	top: 0px;
+         	left: 0px;
+         	width: 300px;
+         	height: 100%;
+         	border-right: solid;
+         	border-color: rgba(0, 22, 22, 0.4);
+         }
+         #navbar ul {
+         	height: 88%;
+         	padding: 0;
+         	overflow-y: auto;
+         	overflow-x: hidden;
+         }
+         #navbar li {
+         	color: #4d4e53;
+         	border-top: 1px solid;
+         	list-style: none;
+         	position: relative;
+         	width: 100%;
+         }
+         #navbar a {
+         	display: block;
+         	padding: 15px 30px;
+         	color: #4d4e53;
+         	text-decoration: none;
+         	cursor: pointer;
+         }
+         #main-doc {
+         	position: absolute;
+         	margin-left: 310px;
+         	padding: 20px;
+         	margin-bottom: 110px;
+         }
+         #main-doc header {
+         	text-align: left;
+         	margin: 0px;
+         }
+         .column-half {
+         	width: 50%;
+         	height: 50%;
+         }
+         .pccolumns {
+         	display: flex;
+         }
+      </style>
+   </head>
+   <body>
+      <nav id="navbar">
+         <header>HTML for beginners</header>
+         <ul>
+            <li>
+               <a class="nav-link" href="#What_is_HTML?">What is HTML?</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#What_are_HTML_tags?">What are HTML tags?</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#What_are_HTML_attributes?">What are HTML attributes?</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#Golden_rules_to_remember">Golden rules to remember</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#HTML_editors">HTML editors</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#Sublime_text_3">Sublime text 3</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#Notepad++">Notepad++</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#Komodo_edit">Komodo edit</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#What_to_avoid">What to avoid</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#Creating_your_first_HTML_webpage">Creating your first HTML webpage</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#Basic_construction_of_an_HTML_page">Basic construction of an HTML page</a>
+            </li>
+            <li>
+               <a class="nav-link" href="#Reference">Reference</a>
+            </li>
+         </ul>
+      </nav>
+      <main id="main-doc">
+         <section class="main-section" id="What_is_HTML?">
+            <header>What is HTML?</header>
+            <article>
+               <p>Okay, so this is the only bit of mandatory theory. In order to begin to write HTML, it helps if you know what you are writing.</p>
+               <p>HTML is the <b>language in which most websites are written</b>. HTML is used to create pages and make them functional.</p>
+               <p>The code used to make them visually appealing is known as CSS and we shall focus on this in a later tutorial. For now, we will focus on <b>teaching you how to build rather than design</b>.</p>
+            </article>
+         </section>
+         <section class="main-section" id="What_are_HTML_tags?">
+            <header>What are HTML tags?</header>
+            <article>
+               <p><a href="https://html.com/tags/" target="_blank">Tags</a> are used to <b>mark up the start of an HTML element</b> and they are usually enclosed in angle brackets. An example of a tag is: <code>&lt;h1&gt;</code></p>
+               <p>Most tags must be opened <code>&lt;h1&gt;</code> and closed <code>&lt;/h1&gt;</code> in order to function.</p>
+            </article>
+         </section>
+         <section class="main-section" id="What_are_HTML_attributes?">
+            <header> What are HTML attributes?
+            </header>
+            <article>
+               <p><a href="https://html.com/attributes/" target="_blank">Attributes</a> contain <b>additional pieces of information</b>. Attributes take the form of an opening tag and additional info is <b>placed inside</b>.
+               </p>
+               <p>An example of an attribute is: <code>&lt;img src="mydog.jpg" alt="A photo of my dog."&gt;</code>
+               </p>
+               <p>In this instance, the image source (src) and the alt text (alt) are attributes of the <code>&lt;img&gt;</code> tag.</p>
+            </article>
+         </section>
+         <section class="main-section" id="Golden_rules_to_remember">
+            <header> Golden rules to remember </header>
+            <article>
+               <p> 
+               <ol>
+                  <li> The vast majority of tags must be <b>opened</b> <code>&lt;tag&gt;</code> and <b>closed</b><code>&lt;/tag&gt;</code> with the element information such as a title or text resting between the tags.
+                  </li>
+                  <li>When using multiple tags, the tags must be <b>closed in the order in which they were opened</b>. For example:<code>&lt;strong>&lt;em>This is really important!&lt;/em&gt;&lt;/strong&gt;</code>
+                  </li>
+               </ol>
+               </p>
+            </article>
+         </section>
+         <section class="main-section" id="HTML_editors">
+         <header> HTML editors </header>
+         <article>
+            <p>Now that we’ve gotten the basic theory out of the way. It’s time to <b>learn how to build our first website</b>.</p>
+            <p>First off, we must ensure that we have the right tools. Most important, we need an HTML editor.</p>
+            <p>There are many choices on the market. Here are a handful of the most popular.</p>
+         </article>
+         <section class="main-section" id="Sublime_text_3">
+            <header> Sublime text 3 </header>
+            <article>
+               <p> However, for this tutorial, we will use the <a href="https://www.sublimetext.com/" target="_blank">Sublime Text 3</a> as it is free and also offers cross-platform support for Windows, Mac, and Linux users. </p>
+               <img src="https://html.com/wp-content/uploads/html-hpg-sublime.png" alt="Sublime example picture"><br>
+               <em>Sublime Text 3 has a mini-preview window on the right.
+               </em>
+               <div class="pccolumns">
+                  <div class="column-half">
+                     <h2> <span style="color:green">Pros</span>
+                     </h2>
+                     <ul>
+                        <li> Easily customizeable </li>
+                        <li> Beginner friendly </li>
+                        <li> Pleasant color schemes to choose from </li>
+                     </ul>
+                  </div>
+                  <div class="column-half">
+                     <h2> <span style="color:red">Cons</span>
+                     </h2>
+                     <ul>
+                        <li> Can’t print documents or code </li>
+                        <li> No toolbar or dashboard available </li>
+                     </ul>
+                  </div>
+               </div>
+            </article>
+         </section>
+         <section class="main-section" id="Notepad++">
+            <header> Notepad++ </header>
+            <article>
+               <p> Another common choice for HTML and other language coders is <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>. It is a tiny program to download and perform the functions you need for writing clean code. </p>
+               <img src="https://html.com/wp-content/uploads/html-homepage-notepad.webp" alt="Notepad++ example picture"><br>
+               <em>This is Notepad ++. Far from glamorous but does the job.</em>
+               <div class="pccolumns">
+                  <div class="column-half">
+                     <h2> <span style="color:green">Pros</span>
+                     </h2>
+                     <ul>
+                        <li> Distraction-free interface </li>
+                        <li> Auto-completion feature </li>
+                        <li> Plugin options for extended functionalities </li>
+                     </ul>
+                  </div>
+                  <div class="column-half">
+                     <h2> <span style="color:red">Cons</span> </h2>
+                     <ul>
+                        <li> Can be difficult to get used to for beginners </li>
+                        <li> No support for Mac </li>
+                     </ul>
+                  </div>
+               </div>
+            </article>
+         </section>
+         <section class="main-section" id="Komodo_edit">
+            <header> Komodo edit </header>
+            <article>
+               <p> <a href="https://www.activestate.com/products/komodo-ide/downloads/edit/" target="_blank">Komodo Edit</a> is one of two editors released by the same label. They offer a simple, open-source editor with a <b>variety of extensions and language support</b>. </p>
+               <p>It is free to download.
+               </p>
+               <img src="https://html.com/wp-content/uploads/html-hpg-komodo.png" alt="Komodo edit example picture"><br>
+               <em>Komodo isn’t one for a flash interface either but is simple to use.
+               </em>
+               <div class="pccolumns">
+                  <div class="column-half">
+                     <h2> <span style="color:green">Pros</span>
+                     </h2>
+                     <ul>
+                        <li> Easy-to-grasp coding interface </li>
+                        <li> BAvailable for Mac, Windows, and Linux </li>
+                        <li> Impressive language support </li>
+                     </ul>
+                  </div>
+                  <div class="column-half">
+                     <h2> <span style="color:red">Cons</span>
+                     </h2>
+                     <ul>
+                        <li> No autocompletion by default </li>
+                        <li> Visual settings are difficult to find and change </li>
+                     </ul>
+                  </div>
+               </div>
+            </article>
+         </section>
+         <section class="main-section" id="What_to_avoid">
+            <header> What to avoid </header>
+            <article>
+               <p><b>Do not use Microsoft Word</b> or any other word processor when writing HTML code, only an HTML editor or at the very least, your machine’s built-in notepad, is suitable for the task.</p>
+               <p>Secondly, ensure that you’ve installed a number of <b>different browsers</b> such as <a href="https://www.google.com/chrome/" target="_blank">Chrome</a> and <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> in order to preview your upcoming creation.</p>
+            </article>
+         </section>
+         <section class="main-section" id="Creating_your_first_HTML_webpage">
+            <header> Creating your first HTML webpage </header>
+            <article>
+               <p>First off, you need to open your HTML editor, where you will find a <br>clean white page</br> on which to write your code.</p>
+               <p>From there you need to layout your page with the following tags.</p>
+            </article>
+         </section>
+         <section class="main-section" id="Basic_construction_of_an_HTML_page">
+            <header> Basic construction of an HTML page </header>
+            <article>
+               <p>These tags should be placed underneath each other <b>at the top of every HTML page</b> that you create.</p>
+               <p> This tag <b>specifies the language</b> you will write on the page. In this case, the language is HTML 5. <code>&lt;!DOCTYPE html&gt;</code></p>
+               <p> This tag signals that from here on we are going to write in HTML code. <code>&lt;html&gt;</code></p>
+               <p> This is where all the <b>metadata for the page</b> goes — stuff mostly meant for search engines and other computer programs.<code>&lt;head&gt;</code></p>
+               <p> This is where the <b>content of the page</b> goes.<code>&lt;body&gt;</code></p>
+               <img src="https://html.com/wp-content/uploads/html-homepage-layout-demo.webp" alt="layout demo"><br>
+               <em>This is how your average HTML page is structured visually.</em>
+            </article>
+         </section>
+         <section class="main-section" id="Reference">
+            <header> Reference </header>
+            <article>
+               <p> Learn more about HTML by clicking <a href="https://html.com/" target="_blank">here</a>.</p>
+            </article>
+         </section>
+      </main>
+   </body>
+</html>
